@@ -1,0 +1,22 @@
+# Local data: the journal, its write-ahead log, exports, logs and run files.
+# `data/` matches anywhere, so `dist/data` (created when the shipped program is
+# run in place) stays out as well.
+*.db
+*.db-wal
+*.db-shm
+data/
+exports/
+logs/
+run/
+*.log
+
+# Build output of the Rust toolchain.  The ready-to-run binaries that ship with
+# the repository live in `dist/`, which is *not* ignored - only the intermediate
+# build directory next to the sources is.
+rust/dist/
+target/
+
+# Editor and OS noise.
+.vscode/
+*.tmp
+Thumbs.db

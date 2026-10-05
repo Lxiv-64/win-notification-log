@@ -1,0 +1,10 @@
+# Toolchain for the native (Rust) implementation of Win Notification Log.
+#
+# The GNU target is pinned on purpose: it links with the `ld.exe` that comes
+# with the `rust-mingw` component, so no Visual Studio / Build Tools / Windows SDK
+# installation is required.  If you prefer the MSVC toolchain (or have Build
+# Tools installed), delete this file or change the channel to
+# "stable-x86_64-pc-windows-msvc".
+[toolchain]
+channel = "stable-x86_64-pc-windows-gnu"
+profile = "minimal"
